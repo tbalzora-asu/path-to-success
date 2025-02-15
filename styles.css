@@ -53,10 +53,11 @@ header {
   background-color: var(--lavender);
   text-align: center;
   position: static;
-  border-radius: 30px;
   max-width: 1280px; 
   margin: auto;
   padding-top: 3rem; 
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .main-title {
@@ -260,9 +261,10 @@ header {
 .contact-section {
   background-color: var(--pink);
   text-align: left;
-  border-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   max-width: 1280px;
-  margin: 2rem auto;
+  margin: auto;
   padding: 2rem;
 }
 .schedule-button {
@@ -277,13 +279,13 @@ header {
 /* -------------- FOOTER -------------- */
 footer {
   background-color: var(--lavender);
-  padding: 1rem;
-  margin-top: auto;
-  border-radius: 30px;
   display: flex;
   justify-content: space-between;
   max-width: 1280px;
-  margin: 2rem auto;
+  margin: auto;
+  padding: 4rem;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 /* -------------------- MEDIA QUERIES -------------------- */
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
