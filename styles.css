@@ -73,7 +73,7 @@ header {
   font-style: italic;
   background-color: var(--pink);
   border-radius: 5px;
-  max-width: 1200px;
+  max-width: 1280px;
   padding: 0.5rem;
 }
 
@@ -147,7 +147,7 @@ header {
 /* -------------- SERVICES SECTION -------------- */
 #services {
   padding: 2rem 1rem;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 2rem auto; 
 }
 #services h2 {
@@ -179,7 +179,7 @@ header {
   background-color: var(--pink);
   color: var(--white);
   border-radius: 30px;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 2rem auto;
   padding: 2rem;
 }
@@ -220,7 +220,7 @@ header {
   background-color: var(--purple);
   border-radius: 30px;
   color: var(--white);
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 2rem auto;
   padding: 2rem;
   text-align: left;
@@ -255,7 +255,7 @@ header {
   background-color: var(--pink);
   text-align: left;
   border-radius: 30px;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 2rem auto;
   padding: 2rem;
 }
@@ -277,7 +277,7 @@ footer {
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 2rem auto;
 }
 /* -------------------- MEDIA QUERIES -------------------- */
