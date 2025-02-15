@@ -69,7 +69,9 @@ header {
     padding: 1rem 2rem;
   }
 .menu-button {
-    display: none;
+    display: inline-block; 
+    width: auto;          
+    flex: 0 0 auto;      
     background-color: var(--yellow);
     border: none;
     padding: 0.5rem 1rem;
@@ -113,6 +115,7 @@ header {
 #services {
     padding: 2rem 1rem;
     max-width: 1200px;
+    margin: 2rem auto; 
 }
 
 #services h2 {
@@ -259,6 +262,8 @@ header {
     border-radius: 30px;
     justify-content: center;
     display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
   }
 
   /*-------------------- MEDIA QUERY (medium) --------------------------------*/
@@ -267,8 +272,13 @@ header {
       display: none;
     }
     .menu-button {
-      display: block;
-    }
+        display: inline-block; 
+        width: auto;
+        flex: 0 0 auto;
+      }
+      .nav-links {
+        display: none;
+      }
     .services-grid {
         
       grid-template-columns: repeat(1, 1fr);
