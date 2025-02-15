@@ -85,12 +85,10 @@ header {
   top: 1rem;
   right: 1rem;
   z-index: 1000;
-
   background-color: var(--yellow);
   border-radius: 15px;
   padding: 0.5rem 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -106,8 +104,6 @@ header {
   font-weight: bold;
   cursor: pointer;
   border-radius: 25px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .menu-button:hover {
@@ -155,23 +151,19 @@ header {
   max-width: 1200px;
   margin: 2rem auto; 
 }
-
 #services h2 {
   margin-bottom: 1rem;
   text-align: left;
   font-size: 2.5rem;
 }
-
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
-
 .services-grid h3 {
   color: var(--yellow);
 }
-
 .service-card {
   background-color: var(--white);
   color: #000;
@@ -179,12 +171,10 @@ header {
   padding: 1.5rem; /* Slightly bigger padding for a cleaner look */
   text-align: center;
 }
-
 .service-card img {
   width: 50px;
   margin-bottom: 1rem;
 }
-
 /* -------------- WHY CHOOSE US -------------- */
 #why-choose-us {
   background-color: var(--pink);
@@ -194,25 +184,21 @@ header {
   margin: 2rem auto;
   padding: 2rem;
 }
-
 #why-choose-us h2 {
   margin-bottom: 1rem;
   color: var(--white);
 }
-
 .choose-us-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
 }
-
 .choose-item {
   padding: 1rem 2rem;
   border-radius: 10px;
   font-weight: bold;
   text-align: center;
 }
-
 .choose-item:nth-child(1) {
   background-color: var(--teal);
   color: var(--dark-gray);
@@ -240,37 +226,31 @@ header {
   padding: 2rem;
   text-align: left;
 }
-
 .pricing-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
-
 .pricing-item h3 {
   margin-bottom: 0.5rem;
   color: var(--yellow);
 }
-
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
   color: #000;
 }
-
 .pricing-table th {
   background-color: var(--yellow);
   border: 1px solid var(--yellow);
   padding: 8px;
   text-align: left;
 }
-
 .pricing-table td {
   background-color: var(--white);
   border: 1px solid var(--yellow);
   padding: 8px;
 }
-
 /* -------------- CONTACT SECTION -------------- */
 .contact-section {
   background-color: var(--pink);
@@ -280,7 +260,6 @@ header {
   margin: 2rem auto;
   padding: 2rem;
 }
-
 .schedule-button {
   background-color: var(--white);
   color: var(--dark-gray);
@@ -291,7 +270,6 @@ header {
   border: none;
   border-radius: 5px;
 }
-
 /* -------------- FOOTER -------------- */
 footer {
   background-color: var(--lavender);
@@ -303,11 +281,16 @@ footer {
   max-width: 1200px;
   margin: 2rem auto;
 }
-
 /* -------------------- MEDIA QUERIES -------------------- */
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 /* Medium (Tablet-ish) */
 @media (min-width: 620px) and (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .pricing-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
   .nav-links {
     display: none;
   }
@@ -320,7 +303,7 @@ footer {
 /* Large (Desktop) */
 @media (min-width: 901px) {
   .services-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .pricing-grid {
     grid-template-columns: repeat(4, 1fr);
