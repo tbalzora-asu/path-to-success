@@ -24,8 +24,9 @@ body {
     font-family: var(--font-primary);
     background: var(--purple);
     color: var(--white);
+    min-height: 100vh;
 }
-
+/*
 h1, h2 {
     font-family: var(--font-heading);
 }
@@ -46,10 +47,212 @@ h3 {
 h4 {
     font-size: 1.15em;
 }
+    */
+header {
+    background-color: var(--lavender);
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+}
+.nav-bar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.menu-button {
+    display: none;
+    background-color: var(--yellow);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--white);
+    margin-top: 2rem;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 0.5rem;
+    background-color: var(--pink);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
 /* Navigation */
 nav {
     background: var(--yellow);
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+/* Services */
+#services {
+    padding: 2rem 1rem;
+}
+
+#services h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    color: #000;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.service-card img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+/* Why Choose Us */
+.why-choose-us {
+    background-color: var(--pink);
+    padding: 2rem;
+    text-align: center;
+}
+
+.choose-us-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.choose-item {
+    background-color: var(--white);
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    min-width: 150px;
+}
+
+/* Pricing */
+#pricing {
+    padding: 2rem;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pricing-box {
+    background-color: var(--yellow);
+    color: #000;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--pink);
+    text-align: center;
+    padding: 2rem;
+}
+
+.schedule-button {
+    background-color: var(--white);
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--lavender);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
 }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
-/*-------------------- MEDIA QUERY (large) ------------------------------------*/
-/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+/* Medium (tablet) */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Large (desktop) */
+@media (min-width: 901px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Extra-large (wide desktops) */
+@media (min-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .nav-bar {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+}
