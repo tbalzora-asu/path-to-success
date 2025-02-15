@@ -112,6 +112,7 @@ header {
 /* Services */
 #services {
     padding: 2rem 1rem;
+    max-width: 1200px;
 }
 
 #services h2 {
@@ -150,7 +151,7 @@ header {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
-    text-align: left;
+
   }
   
   #why-choose-us h2 {
@@ -234,6 +235,9 @@ header {
   .contact-section {
     background-color: var(--pink);
     text-align: left;
+    border-radius: 30px;
+    max-width: 1200px;
+    margin: 2rem auto;
     padding: 2rem;
 
   }
@@ -243,7 +247,6 @@ header {
     color: var(--dark-gray);
     padding: 1rem 2rem;
     margin-top: 1rem;
-    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
   }
@@ -267,7 +270,8 @@ header {
       display: block;
     }
     .services-grid {
-      grid-template-columns: repeat(2, 1fr);
+        
+      grid-template-columns: repeat(1, 1fr);
     }
     /* Pricing grid remains 1 column at this breakpoint */
   }
