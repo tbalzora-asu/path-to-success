@@ -28,12 +28,34 @@ body {
     margin: 0; 
     padding: 0;
 }
+/* Typography */
+h1, h2 {
+    font-family: var(--font-heading);
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  h4 {
+    font-size: 1.15em;
+  }
+  
 /* Header & Nav */
 header {
     background-color: var(--lavender);
     text-align: center;
     padding: 3rem 1rem;
     position: relative;
+    border-radius: 30px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    
 }
 /* Nav Bar */
 .nav-bar {
@@ -103,6 +125,9 @@ header {
     grid-template-columns: 1fr;
     gap: 1rem;
 }
+.services-grid h3{
+    color: var(--yellow);
+}
 
 .service-card {
     background-color: var(--white);
@@ -120,7 +145,7 @@ header {
 /* Why Choose Us */
 #why-choose-us {
     background-color: var(--pink);
-    color: #fff;
+    color: var(--white);
     border-radius: 30px;
     max-width: 1200px;
     margin: 2rem auto;
@@ -129,43 +154,38 @@ header {
   }
   
   #why-choose-us h2 {
-    font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--white);
   }
   
   .choose-us-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  /* Each "Why Choose Us" item gets its own color */
-  .choose-item:nth-child(1) {
-    background-color: var(--teal);
-    color: #000;
-  }
-  .choose-item:nth-child(2) {
-    background-color: var(--lavender);
-    color: #000;
-  }
-  .choose-item:nth-child(3) {
-    background-color: var(--yellow);
-    color: #000;
-  }
-  .choose-item:nth-child(4) {
-    background-color: var(--white);
-    color: #000;
   }
   
   .choose-item {
     padding: 1rem 2rem;
     border-radius: 10px;
     font-weight: bold;
-    min-width: 150px;
     text-align: center;
+  }
+  
+  .choose-item:nth-child(1) {
+    background-color: var(--teal);
+    color: var(--dark-gray);
+  }
+  .choose-item:nth-child(2) {
+    background-color: var(--lavender);
+    color: var(--dark-gray);
+  }
+  .choose-item:nth-child(3) {
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+  }
+  .choose-item:nth-child(4) {
+    background-color: var(--white);
+    color: var(--dark-gray);
   }
 
 /* Pricing */
@@ -173,15 +193,28 @@ header {
 #pricing {
     background-color: var(--purple);
     border-radius: 30px;
-    color: #000;
+    color: var(--white);
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
     text-align: left;
   }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .pricing-item h3 {
+    margin-bottom: 0.5rem;
+    color: var(--yellow);
+  }
+  
   .pricing-table {
     width: 100%;
     border-collapse: collapse;
+    color: #000;
   }
   
   .pricing-table th {
@@ -196,71 +229,71 @@ header {
     border: 1px solid var(--yellow);
     padding: 8px;
   }
-
-/* Contact Section */
-.contact-section {
+  
+  /* Contact Section */
+  .contact-section {
     background-color: var(--pink);
     text-align: left;
     padding: 2rem;
-}
 
-.schedule-button {
+  }
+  
+  .schedule-button {
     background-color: var(--white);
-    color: #000;
+    color: var(--dark-gray);
     padding: 1rem 2rem;
     margin-top: 1rem;
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-}
-
-/* Footer */
-footer {
+  }
+  
+  /* Footer */
+  footer {
     background-color: var(--lavender);
     padding: 1rem;
     margin-top: auto;
-}
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+  }
 
-/*-------------------- MEDIA QUERY (medium) --------------------------------*/
-/* Medium (tablet) */
-@media (max-width: 900px) {
+  /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+  @media (min-width: 620px) {
     .nav-links {
-        display: none;
+      display: none;
     }
-
     .menu-button {
-        display: block;
+      display: block;
     }
-
     .services-grid {
-        grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
-
+    /* Pricing grid remains 1 column at this breakpoint */
+  }
+  
+  /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+  @media (min-width: 950px) {
+    .nav-links {
+        display: flex;
+      }
+      .menu-button {
+        display: none;
+      }
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
     .pricing-grid {
-        grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
-}
-
-/* Large (desktop) */
-@media (min-width: 901px) {
+  }
+  
+  /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+  @media (min-width: 1280px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
-
     .pricing-grid {
-        grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
-}
-
-/* Extra-large (wide desktops) */
-@media (min-width: 1200px) {
-    .services-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .nav-bar {
-        position: absolute;
-        top: 1rem;
-        right: 2rem;
-    }
-}
+  }
