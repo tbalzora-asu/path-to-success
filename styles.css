@@ -284,7 +284,7 @@ header {
 /* -------------- CONTACT SECTION -------------- */
 .contact-grid {
         display: flex;
-        grid-template-columns: 1rem;
+        grid-template-columns: 1fr;
         gap: 1rem;
       
 }
